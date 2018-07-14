@@ -1,0 +1,25 @@
+<h1>Sign In</h1>
+
+<br>
+
+<form action="<%= session_url %>" method="post">
+  <input type="hidden" name="authenticity_token" value="form_authenticity_token">
+  
+  <label for="Username">Username:</label>
+    <input type="text" name="user[username]" id="Username">
+  
+  <label for="Email">Email:</label>
+    <input type="email" name="user[email]" id="Email">
+    
+  <label for="Password">Password:</label>  
+    <input type="password" name="user[password]" id="Password">
+    
+  <input type="submit" value="Sign in">
+</form>
+
+<br>
+
+<form action="<%= new_user_url %>" method="get">
+  <label for="sign_up">New to our website?</label>
+    <input type="submit" value="sign up" id="sign_up">
+</form>
